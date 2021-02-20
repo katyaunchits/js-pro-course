@@ -16,19 +16,9 @@ function createCounter(initialValue = 0) {
             return currentValue
         },
         discard: function() {
-            currentValue = 0
+            currentValue = initialValue;
             console.log(currentValue)
             return currentValue
         }
     }
 }
-
-const counter = createCounter(2);
-counter.showValue();
-counter.increment();
-counter.increment(2);
-counter.decrement();
-counter.decrement(5);
-counter.discard();
-counter.increment();
-counter.decrement(3);
