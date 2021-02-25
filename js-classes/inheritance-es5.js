@@ -128,7 +128,7 @@ Tesla.prototype.renderInfo = function() {
 }
 
 Tesla.prototype.getIngo = function() {
-    return this.name + " " + this.model + ", " + this.year + ", " + this.price + '$';
+    return `${this.name} ${this.model}, ${this.year}, ${this.price}$`;
 }
 
 function createList(arr) {
