@@ -39,6 +39,23 @@ Car.prototype.calculateWay = function(kilometers, fuel) {
 
 }
 
+Car.prototype.renderInfo = function() {
+    let card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `<div class="body">
+    <div class="content">
+        <div class="title">${this.name}</div> 
+        <div class="subtitle">Model: ${this.model}</div>
+        <div class="image"><img src="${this.picture}"></img></div>   
+        <ul class="descr"></ul>     
+        <div class="price">${this.price}$</div>
+    </div>
+</div>`
+    let container = document.querySelector('.container');
+    container.append(card);
+    createList(this.equipment);
+}
+
 
 
 function BMW(name, model, year, color, maxSpeed, fuelCapacity = 60, fuelConsumption = 10, country, price, picture) {
@@ -52,26 +69,7 @@ BMW.prototype = Object.create(Car.prototype);
 BMW.prototype.constructor = BMW;
 
 
-BMW.prototype.renderInfo = function() {
-    let card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `<div class="body">
-    <div class="content">
-        <div class="title">${this.name}</div> 
-        <div class="subtitle">Model: ${this.model}</div>
-        <div class="image"><img src="${this.picture}"></img></div>       
-        <div class="price">${this.price}$</div>
-    </div>
-</div>`
-    let container = document.querySelector('.container');
-    container.append(card);
-}
-
-
-
 let bmw = new BMW('BMW', 'X6', 2020, 'black', 370, 50, 3, 'Germany', 108500, "img/bmw-white.png");
-
-
 
 function Mazda(name, model, year, color, maxSpeed, fuelCapacity = 60, fuelConsumption = 10, price) {
     Car.call(this, name, model, year, color, maxSpeed, fuelCapacity, fuelConsumption);
@@ -110,22 +108,6 @@ Tesla.prototype = Object.create(Car.prototype);
 Tesla.prototype.constructor = Tesla;
 
 
-Tesla.prototype.renderInfo = function() {
-    let card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `<div class="body">
-    <div class="content">
-        <div class="title">${this.name}</div> 
-        <div class="subtitle">Model: ${this.model}</div>
-        <div class="image"><img src="${this.picture}"></img></div>   
-        <ul class="descr"></ul>     
-        <div class="price">${this.price}$</div>
-    </div>
-</div>`
-    let container = document.querySelector('.container');
-    container.append(card);
-    createList(this.equipment);
-}
 
 Tesla.prototype.getIngo = function() {
     return `${this.name} ${this.model}, ${this.year}, ${this.price}$`;
