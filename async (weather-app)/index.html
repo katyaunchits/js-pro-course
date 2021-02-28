@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+    <title>Weather</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="search-area">
+                <form action="submit" id="form">
+                    <input type="text" name="country" id="country" placeholder="Country...">
+                    <input type="text" name="city" id="city" placeholder="City...">
+                    <button type="submit"><img src="img/search.svg" alt=""></button>
+                </form>
+                <div class="error">We couldn't find any results for <span id="error-result"></span><img class="close" src="img/close.svg" alt=""></div>
+            </div>
+            <div class="weather-info">
+                <div class="info_block time">
+                    <div class="info_title"><span id="time"></span></div>
+                    <div class="info_subtitle"><span id="location"></span></div>
+                </div>
+                <div class="info_block weather">
+                    <div class="info_title"><span id="temperature_first"></span></div>
+                    <div class="info_subtitle"><span id="weather_descr"></span><img src="" id="weather_icon"></div>
+                    <div>
+                        <ul class="info_descr">
+                            <li>Feels like: <span id="temperature_second">15</span><span class="degree_small"></span></li>
+                            <li>Wind: <span id="wind"> </span></li>
+                            <li>Speed: <span id="speed"></span> km/h</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </main>
+</body>
+
+</html>
