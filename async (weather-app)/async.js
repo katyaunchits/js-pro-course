@@ -95,19 +95,3 @@ window.onload = function() {
         createWeatherInfo(data);
     })
 };
-
-
-
-
-
-// if (weather_descriptions == ('Sunny' || 'Clear')) {
-//     weatherIcon.src = 'img/sunny.png';
-// } else if (weather_descriptions == 'Partly cloudy') {
-//     weatherIcon.src = 'img/partly_cloudy.png';
-// } else if (weather_descriptions == 'Cloudy') {
-//     weatherIcon.src = 'img/cloudy.png';
-// } else if (weather_descriptions == 'Overcast') {
-//     weatherIcon.src = 'img/overcast.png';
-// } else if (weather_descriptions == 'Mist') {
-//     weatherIcon.src = 'img/mist.png';
-// }
